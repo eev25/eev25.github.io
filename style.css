@@ -1,0 +1,85 @@
+:root {
+      --text: #111;
+      --muted: #666;
+      --bg: #fafafa;
+      --link: #000;
+      --max-width: 42rem;
+    }
+
+    html {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    body {
+      margin: 0;
+      padding: 3rem 1.25rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      max-width: var(--max-width);
+      width: 100%;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+      margin-top: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 1rem 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
