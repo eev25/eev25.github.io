@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cleaner iMessage Threads for Claude Code | Einar Esau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+  <meta name="description" content="Stop messages from echoing in your self-chat when using the Claude Code iMessage plugin.">
+  <link rel="canonical" href="https://www.einaresau.com/posts/imessage-claude.html" />
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    figure {
+      margin: 2rem 0;
+    }
+
+    figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    figure img.phone {
+      max-width: 22rem;
+    }
+
+    figcaption {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    ol {
+      padding-left: 1.5rem;
+    }
+
+    ol li {
+      margin: 0.5rem 0;
+    }
+
+    code {
+      font-size: 0.9em;
+      background: #eee;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <p><a href="../index.html">Einar Esau</a></p>
+      <h1>Cleaner iMessage Threads for Claude Code</h1>
+      <span class="section-intro">October 2026</span>
+    </header>
+
+    <figure>
+      <img class="phone" src="imessage-claude/iphone-hello-claude.png" alt="iPhone Messages thread with a contact named Claude: one sent message and one reply, no duplicates">
+    </figure>
+
+    <p>
+      There's a common issue with the official <a href="https://claude.com/marketplace/plugins/imessage" target="_blank">Claude Code iMessage plugin</a>
+      where in self chat every message shows up twice in the thread, once as sent and once as received.
+      The thread quickly becomes noisy and hard to use for anything serious.
+    </p>
+
+    <p>
+      But if your Mac only responds using your email address, and your iPhone only using your number,  
+      each message will show up once. It'll become a normal conversation between two contacts like any other.
+    </p>
+
+    <h2>iPhone: Phone Number Only</h2>
+
+    <ol>
+      <li>Open <strong>Settings &rarr; Apps &rarr; Messages &rarr; Send &amp; Receive</strong>.</li>
+      <li>Under <em>You Can Receive iMessages to and Reply From</em>, check your phone number and uncheck your email.</li>
+    </ol>
+
+    <figure>
+      <img class="phone" src="imessage-claude/iphone-send-receive.png" alt="iPhone Send & Receive settings with only the phone number checked">
+      <figcaption>iPhone: phone number checked, email unchecked.</figcaption>
+    </figure>
+
+    <h2>Mac: Email Only</h2>
+
+    <ol>
+      <li>Open <strong>Messages &rarr; Settings &rarr; iMessage</strong>.</li>
+      <li>Under <em>You can be reached for messages at</em>, uncheck your phone number and check your email.</li>
+      <li>Set <em>Start new conversations from</em> to your email.</li>
+    </ol>
+
+    <figure>
+      <img src="imessage-claude/mac-send-receive.png" alt="Mac Messages iMessage settings with only the email checked and new conversations starting from email">
+      <figcaption>Mac: email checked, phone number unchecked, new conversations from email.</figcaption>
+    </figure>
+
+    <h2>Start Messaging</h2>
+
+    <p>
+      With Claude Code running on your Mac with the plugin enabled
+      (<code>claude --channels plugin:imessage@claude-plugins-official</code>), open Messages on
+      your iPhone and start a new conversation with your <strong>email address</strong> rather than
+      your own number.
+    </p>
+
+    <p>
+      The conversation should now read like any other chat, and of course you can add your email address as a separate named contact for a cleaner look.
+    </p>
+
+    <figure>
+      <img src="imessage-claude/claude-code-response.png" alt="Claude Code terminal session receiving the iMessage and replying">
+      <figcaption>The same exchange from the POV of the Claude Code session.</figcaption>
+    </figure>
+
+    <h2>Caveat</h2>
+
+    <p>
+      Your Mac won't get messages sent to your phone number anymore. Anyone who texts your number
+      will only reach you on your iPhone.
+    </p>
+
+    <p>
+      For most this should be fine, particularly if you keep something like an iMac aside exclusively for your agents.
+      In any case, you can always change how you Mac can be reached as necessary.
+    </p>
+  </main>
+</body>
+</html>
